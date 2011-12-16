@@ -35,52 +35,70 @@
 
     </header>
     <div id="main" role="main">
-    <img alt="logo" src="images/logo.png" id="logo" />
-    <ul id="menu">
-		<li class="item-105 active deeper parent"><a href="/" >Photo</a><ul><li class="item-118 current active"><a href="/" >Artists</a></li><li class="item-119"><a href="/index.php/photo/advertising" >Advertising</a></li><li class="item-120"><a href="/index.php/photo/reportage" >Reportage</a></li><li class="item-122"><a href="/index.php/photo/events" >Events</a></li><li class="item-123"><a href="/index.php/photo/artsy" >Artsy</a></li><li class="item-121"><a href="/index.php/photo/portrait" >Portrait</a></li><li class="item-128"><a href="/index.php/photo/fashion" >Fashion</a></li></ul></li><li class="item-106 parent"><a href="/index.php/video/going-on-like-this" >Video</a></li><li class="item-107 parent"><a href="/index.php/live/tongedron" >Live</a></li><li class="item-108 parent"><a href="/index.php/about" >About</a></li>
-	</ul>
-		<ul id="pictures">
-          		          			<li>
+    <div id="menuContainer">
+    	<img alt="logo" src="images/logo.png" id="logo" />
+	    <ul id="menu">
+			<li class="item-105 active deeper parent"><a href="/" >Photo</a><ul><li class="item-118 current active"><a href="/" >Artists</a></li><li class="item-119"><a href="/index.php/photo/advertising" >Advertising</a></li><li class="item-120"><a href="/index.php/photo/reportage" >Reportage</a></li><li class="item-122"><a href="/index.php/photo/events" >Events</a></li><li class="item-123"><a href="/index.php/photo/artsy" >Artsy</a></li><li class="item-121"><a href="/index.php/photo/portrait" >Portrait</a></li><li class="item-128"><a href="/index.php/photo/fashion" >Fashion</a></li></ul></li><li class="item-106 parent"><a href="/index.php/video/going-on-like-this" >Video</a></li><li class="item-107 parent"><a href="/index.php/live/tongedron" >Live</a></li><li class="item-108 parent"><a href="/index.php/about" >About</a></li>
+		</ul>
+		<div id="controls">
+			<a href="#" id="previous"></a>
+			<a href="#" id="next"></a>
+		</div>
+	</div>
+		<ul id="slider">
+          		          			<li class="sliderItem">
             										<img src="images/fotos/artists-1.jpg" alt="p Artists 1" />
+            										<div class="imageDescription">
+            											<h3>Titel</h3>
+            											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+            										</div>
 					</li>
-                          			<li>
+                          			<li class="sliderItem">
             										<img src="images/fotos/artists-2.jpg" alt="p Artists 2" />
+            										<div class="imageDescription">
+            											<h3>Titel</h3>
+            											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+            										</div>
 					</li>
-                          			<li>
+                          			<li class="sliderItem">
             										<img src="images/fotos/artists-3.jpg" alt="p Artists 3" />
+            										<div class="imageDescription">
+            											<h3>Titel</h3>
+            											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+            										</div>
 					</li>
-                          			<li>
+                          			<li class="sliderItem">
             										<img src="images/fotos/artists-4.jpg" alt="p Artists 4" />
 					</li>
-                          			<li>
+                          			<li class="sliderItem">
             										<img src="images/fotos/artists-5.jpg" alt="p Artists 5" />
 					</li>
-                          			<li>
+                          			<li class="sliderItem">
             										<img src="images/fotos/artists-6.jpg" alt="p Artists 6" />
 					</li>
-                          			<li>
+                          			<li class="sliderItem">
             										<img src="images/fotos/artists-7.jpg" alt="p Artists 7" />
 					</li>
-                          			<li>
+                          			<li class="sliderItem">
             										<img src="images/fotos/artists-9.jpg" alt="p Artists 9" />
 					</li>
-                          			<li>
+                          			<li class="sliderItem">
             										<img src="images/fotos/artists-10.jpg" alt="p Artists 10" />
 						
 					</li>
-                          			<li>
+                          			<li class="sliderItem">
             										<img src="images/fotos/artists-11.jpg" alt="p Artists 11" />
 						
 					</li>
-                          			<li>
+                          			<li class="sliderItem">
             										<img src="images/fotos/artists-12.jpg" alt="p Artists 12" />
 						
 					</li>
-                          			<li>
+                          			<li class="sliderItem">
             										<img src="images/fotos/artists-13.jpg" alt="p Artists 13" />
 						
 					</li>
-                          			<li>
+                          			<li class="sliderItem">
             										<img src="images/fotos/artists-14.jpg" alt="p Artists 14" />
 					</li>
                         	</ul>
@@ -102,18 +120,6 @@
   <script defer src="js/plugins.js"></script>
   <script defer src="js/script.js"></script>
   <!-- end scripts -->
-  
-  
-
-
-  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
-       mathiasbynens.be/notes/async-analytics-snippet -->
-  <script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>
 
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
