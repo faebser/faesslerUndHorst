@@ -262,7 +262,7 @@ body {
 }
 
 #controls,
-#menu {
+.menu-mainmenu-container {
 	opacity: 0.8;
 	background-color: #000000;
 	width: 130px;
@@ -290,35 +290,35 @@ body {
 	background-repeat: no-repeat;
 	background-image: url("../images/next.png");
 }
-#menu {
+.menu {
     margin: 88px 0px 0px;
     padding: 30px 0 30px 0;
     text-align: center;
     z-index: 10;
 }
 
-#menu li ul {
+.menu li ul {
 	padding: 0px;
 	}
 
-#menu a {
+.menu a {
 	text-decoration: none;
     text-transform: uppercase;
     color: #fff;
 	}
 
-#menu li {
+.menu li {
 	list-style-type: none;
 	}
-
-#menu .parent a {
+#menu {display: none;}
+#menu-mainmenu a {
 	font-size: 24px;
     letter-spacing: 0.025em;
     line-height: 0.85;
     word-spacing: -0.02em;
 	}
 
-#menu .parent li a {
+.sub-menu li a {
 	font-size: 12px;
 	}
 	
