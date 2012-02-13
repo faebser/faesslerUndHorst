@@ -21,9 +21,6 @@ get_header(); ?>
     <div id=main role=main>
     <div id=menuContainer>
     	<img alt=logo src="<?php echo get_template_directory_uri(); ?>/images/logo.png" id=logo />
-	    <ul id=menu>
-			<li class="item-105 active deeper parent"><a href="/">Photo</a><ul><li class="item-118 current active"><a href="/">Artists</a></li><li class=item-119><a href="/index.php/photo/advertising">Advertising</a></li><li class=item-120><a href="/index.php/photo/reportage">Reportage</a></li><li class=item-122><a href="/index.php/photo/events">Events</a></li><li class=item-123><a href="/index.php/photo/artsy">Artsy</a></li><li class=item-121><a href="/index.php/photo/portrait">Portrait</a></li><li class=item-128><a href="/index.php/photo/fashion">Fashion</a></li></ul></li><li class="item-106 parent"><a href="/index.php/video/going-on-like-this">Video</a></li><li class="item-107 parent"><a href="/index.php/live/tongedron">Live</a></li><li class="item-108 parent"><a href="/index.php/about">About</a></li>
-		</ul>
 		<?php wp_nav_menu(); ?>
 		<div id=controls>
 			<a href="#" id=previous></a>
@@ -31,7 +28,9 @@ get_header(); ?>
 		</div>
 	</div>
 		<ul id=slider>
-		<?php if ( have_posts() ) : ?>
+		<?php global $faesslerUndHorstIndex;
+				$faesslerUndHorstIndex = 1;
+			 if ( have_posts() ) : ?>
           		<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php
