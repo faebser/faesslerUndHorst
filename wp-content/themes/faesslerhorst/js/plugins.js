@@ -36,7 +36,8 @@ window.log = function(){
 	data = {
 			amountShifting : 1,
 			pointer : 0,
-			elements : {}
+			elements : {},
+			speed: 1000
 	};
 
 	/*function hookBefore() {
@@ -171,7 +172,7 @@ window.log = function(){
 							}							
 							slider.animate({
 								marginLeft: left
-							});
+							}, data.speed);
 							// here are the hook-functions called
 							if(typeof hookPreviousAfter == 'function') {
 								hookPreviousAfter();
@@ -204,7 +205,7 @@ window.log = function(){
 
 							slider.animate({
 								marginLeft: left
-							});
+							}, data.speed);
 							// here are the hook-functions called
 							if(typeof hookNextAfter == 'function') {
 								hookNextAfter();
@@ -215,7 +216,7 @@ window.log = function(){
 						}
 					});
 				});
-			}, 
+			}/*, 
 			slideTo : function(name) {
 				var prevItem, nextItem, diff;
 				for ( var item in data.items) {
@@ -269,12 +270,9 @@ window.log = function(){
 						slider.animate({
 							marginLeft: left
 						});
-						spacerSlider.animate({
-							marginLeft: left
-						});
 					}
 				}
-			}
+			}*/
 	}
 
 	$.fn.slideshow = function(method) {
