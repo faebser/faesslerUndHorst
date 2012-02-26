@@ -243,7 +243,8 @@ body {
 	
 #logo {
 	position: absolute;
-	left: 0px;
+	left: -27px;
+	top: 1px;
 	z-index: 11;
 	}
 #slider {
@@ -257,20 +258,30 @@ body {
 	position: relative;
 	}
 #menuContainer {
+	top: 24px;
 	width: 130px;
 	position: absolute;
-	left: 27px;
+	left: 79px;
 	overflow: visible;
 	z-index: 1000;
 }
 
 #controls,
 .menu-mainmenu-container {
-	opacity: 0.8;
-	background-color: #000000;
 	width: 130px;
+	background: rgb(0,0,0);
 }
 
+.rgba #controls,
+.rgba .menu-mainmenu-container {
+	background: rgba(0,0,0,0.5);
+}
+.ie #controls,
+.ie .menu-mainmenu-container {
+	background: transparent;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000, endColorstr=#7f000000)";
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000, endColorstr=#7f000000);
+}
 #controls {
 	margin: 5px 0 0;
 	height: 80px;
@@ -341,7 +352,15 @@ body {
 	position: absolute;
 	top: 10px;
 	right: -250px;
-	background: rgba(0,0,0,0.8);
+	background: rgba(0,0,0);
+}
+.rgba .imageDescription {
+	background: rgba(0,0,0,0.5);
+}
+.ie .imageDescription {
+	background: transparent;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000, endColorstr=#7f000000)";
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000, endColorstr=#7f000000);
 }
 
 /* ==|== media queries ======================================================
