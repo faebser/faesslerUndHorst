@@ -22,18 +22,19 @@ get_header(); ?>
     <div id=menuContainer>
     	<img alt=logo src="<?php echo get_template_directory_uri(); ?>/images/logo.png" id=logo />
 		<?php wp_nav_menu(); ?>
+		<?php if(!is_page()) {?>
 		<div id=controls>
 			<a href="#" id=previous></a>
 			<a href="#" id=next></a>
 		</div>
+		<?php } ?>
 	</div>
 	<?php if(is_page()) {
 		if ( have_posts() ) :
 			while ( have_posts() ) : the_post();
-			/* Include the Post-Format-specific template for the content.
-			 * If you want to overload this in a child theme then include a file
-			* called content-___.php (where ___ is the Post Format name) and that will be used instead.
-			*/
+				/* 
+				 * Include Page Template
+				 */
 				get_template_part('pager');
 			endwhile;
 		endif;		
@@ -51,6 +52,6 @@ get_header(); ?>
 				 endwhile;
 			endif; ?>
 		</ul>
-    </div>
+	</div>
 
 <?php get_footer(); ?>

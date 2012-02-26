@@ -362,6 +362,27 @@ body {
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000, endColorstr=#7f000000)";
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000, endColorstr=#7f000000);
 }
+.pageContent {
+	position: relative;
+	top: -464px;
+	left: 245px;
+}
+.pageContent.about p {
+	width: 150px;
+	height: 360px;
+	float: left;
+	margin: 1em 15px 0 0;
+	background: rgb(0,0,0);
+	padding: 0 20px 10px 20px;
+}
+.rgba .pageContent.about p {
+	background: rgba(0,0,0,.5);
+}
+.ie .pageContent.about p {
+	background: transparent;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000, endColorstr=#7f000000)";
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000, endColorstr=#7f000000);
+}
 
 /* ==|== media queries ======================================================
    PLACEHOLDER Media Queries for Responsive Design.
