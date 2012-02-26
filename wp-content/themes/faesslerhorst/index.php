@@ -27,22 +27,29 @@ get_header(); ?>
 			<a href="#" id=next></a>
 		</div>
 	</div>
+	<?php if(is_page()) {
+		if ( have_posts() ) :
+			while ( have_posts() ) : the_post();
+			/* Include the Post-Format-specific template for the content.
+			 * If you want to overload this in a child theme then include a file
+			* called content-___.php (where ___ is the Post Format name) and that will be used instead.
+			*/
+				get_template_part('pager');
+			endwhile;
+		endif;		
+	}?>
 		<ul id=slider>
 		<?php global $faesslerUndHorstIndex;
-				$faesslerUndHorstIndex = 1;
-			 if ( have_posts() ) : ?>
-          		<?php while ( have_posts() ) : the_post(); ?>
-
-					<?php
+			$faesslerUndHorstIndex = 1;
+			 if ( have_posts() ) :
+				while ( have_posts() ) : the_post(); 
 						/* Include the Post-Format-specific template for the content.
 						 * If you want to overload this in a child theme then include a file
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */
 						get_template_part( 'content', get_post_format() );
-					?>
-
-				<?php endwhile; ?>
-		<?php endif; ?>
+				 endwhile;
+			endif; ?>
 		</ul>
     </div>
 

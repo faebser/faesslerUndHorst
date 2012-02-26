@@ -2,8 +2,20 @@
 	fabian.frei@openinteractive.ch
  */
 
+
+
 $(document).ready(function() {
-	
+	if( $(window).height() > 561) {
+		middleTheContainer();
+	}
+	$(window).resize(function() {
+		if( $(window).height() > 561) {
+			middleTheContainer();
+		}
+		else if($(window).height() < 561 && $('#main').css('top') != '0px') {
+			resetTheContainer();
+		}
+	});
 });
 
 $(window).load(function () {
