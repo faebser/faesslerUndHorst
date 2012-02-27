@@ -289,7 +289,6 @@ window.log = function(){
 
 function middleTheContainer() {
 	var half = ($(window).height()*0.5)-($('#main').outerHeight(true)*0.5);
-	console.log("window animated for height " + half + " px");
 	$('#main').animate({ top: half });
 }
 

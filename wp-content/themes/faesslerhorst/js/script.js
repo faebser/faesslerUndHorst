@@ -2,11 +2,10 @@
 	fabian.frei@openinteractive.ch
  */
 
-
-
 $(document).ready(function() {
 	if( $(window).height() > 561) {
-		middleTheContainer();
+		var half = ($(window).height()*0.5)-($('#main').outerHeight(true)*0.5);
+		$('#main').css({ top: half });
 	}
 	$(window).resize(function() {
 		if( $(window).height() > 561) {
