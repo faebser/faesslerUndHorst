@@ -21,9 +21,13 @@ $(window).load(function () {
 	$('#slider').fadeIn(800, function() {
 		$('#main').slideshow();
 		$('.sliderItem').hover(function() {
-			$(this).find('.imageDescription').animate({right : "10"});
+			if(! $(this).find('.imageDescription').is(':animated')) {
+				$(this).find('.imageDescription').fadeIn();
+			}
 		}, function() {
-			$(this).find('.imageDescription').animate({right : "-250"});
+			if(! $(this).find('.imageDescription').is(':animated')) {
+				$(this).find('.imageDescription').fadeOut();
+			}
 		});
 	});
 });
