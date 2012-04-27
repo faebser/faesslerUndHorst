@@ -154,6 +154,8 @@ window.log = function(){
 					// previous
 					previous.click(function(event) {
 						event.preventDefault(); // prevent firing of default event
+						
+						resetAllDescriptions();
 
 						if (! slider.is(":animated")) {
 							// here are the hook-functions called
@@ -186,6 +188,9 @@ window.log = function(){
 					// Next
 					next.click(function(event) {
 						event.preventDefault();
+						
+						resetAllDescriptions();
+						
 						if (! slider.is(":animated")) {
 							// here are the before hook-functions called
 							if(typeof hookNextBefore == 'function') {
@@ -206,6 +211,7 @@ window.log = function(){
 							slider.animate({
 								marginLeft: left
 							}, data.speed);
+							
 							// here are the hook-functions called
 							if(typeof hookNextAfter == 'function') {
 								hookNextAfter();
@@ -294,4 +300,9 @@ function middleTheContainer() {
 
 function resetTheContainer() {
 	$('#main').animate({ top: 0 });
+}
+function resetAllDescriptions() {
+	$('.imageDescription').filter(':visible').each(function(){
+		$(this).fadeOut();
+	});
 }

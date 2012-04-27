@@ -15,6 +15,15 @@ $(document).ready(function() {
 			resetTheContainer();
 		}
 	});
+	$('.imageDescription').each(function(){
+		var $this = $(this);
+		var height = $('.menu-mainmenu-container').outerHeight() + $('#controls').outerHeight(true) - parseInt($this.css("padding-top"));
+		var imgWidth = $this.siblings('img').outerWidth();
+		if(imgWidth-10 < $this.outerWidth(true) + $this.css('left')) {
+			$this.css('width', imgWidth - parseInt($this.css('left'))- parseInt($this.css('paddingLeft')) -parseInt($this.css('paddingRight')) - 2);
+		}
+		$this.css('height', height+'px');
+	});
 });
 
 $(window).load(function () {
